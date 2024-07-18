@@ -46,7 +46,7 @@ const GameBoard = (() => {
         roundInformation.textContent = message;
     }
 
-    // resets the board, the functions invoked delete the makrs and add the default message.
+    // resets the board, the functions invoked delete the marks and add the default message.
     const resetBoard = () => {
         deleteMarks();
         displayMessage();
