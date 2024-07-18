@@ -1,3 +1,10 @@
+:root {
+    --dark-blue: #1A237E; /* header title, table info, X and 0 signs, restart button, restart button border, footer background */
+    --lavender: #EDE7F6; /* title background, table background, footer text */
+    --light-blue: #C5CAE9; /* header border, table cells border, restart button background */
+    --white: #FFFFFF; /* table cells background */
+}
+
 * {
     margin: 0;
     padding: 0;
