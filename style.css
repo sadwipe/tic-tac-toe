@@ -2,7 +2,8 @@
     --dark-blue: #1A237E; /* header title, table info, X and 0 signs, restart button, restart button border, footer background */
     --lavender: #EDE7F6; /* title background, table background, footer text */
     --light-blue: #C5CAE9; /* header border, table cells border, restart button background */
-    --white: #FFFFFF; /* table cells background */
+    --white: #fcf4fd; /* table cells background */
+    --cell-hover: #b291ff;
 }
 
 * {
@@ -10,4 +11,103 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Varela Round', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+}
+
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-blue);
+    padding: 32px;
+    border-bottom: 5px solid var(--dark-blue);
+}
+
+.title {
+    color: var(--dark-blue);
+    font-size: 6rem;
+    line-height: 1.2;
+}
+
+.info {
+    color: var(--dark-blue);
+    font-size: 3rem;
+    padding: 15px 0 15px 0
+}
+
+.cell {
+    color: var(--dark-blue);
+    background-color: var(--white);
+    border: 1px solid var(--dark-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 6rem;
+    height: 150px;
+    width: 150px;
+    cursor: pointer;
+}
+
+.cell:hover {
+    background-color: var(--cell-hover)
+}
+
+.content {
+    background-color: var(--lavender);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.restart-button {
+    color: var(--dark-blue);
+    border: 2px solid var(--dark-blue);
+    border-radius: 5px;
+    background-color: var(--light-blue);
+    height: 90px;
+    width: 220px;
+    font-size: 3rem;
+}
+
+.button-container {
+    margin: 30px 0 30px 0;
+}
+
+.footer {
+    background-color: var(--dark-blue);
+    color: var(--lavender);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0 20px 0;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+.table {
+    background-color: var(--lavender);
+    height: 454px;
+    width: 454px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 2px solid var(--dark-blue)
+}
+
+@media (max-width: 660px) {
+
+}
+
+@media (max-width: 420px) {
+
 }
