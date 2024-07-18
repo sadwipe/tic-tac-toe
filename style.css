@@ -4,6 +4,7 @@
     --light-blue: #C5CAE9; /* header border, table cells border, restart button background */
     --white: #fcf4fd; /* table cells background */
     --cell-hover: #b291ff;
+    --button-hover: #a2a7ca;
 }
 
 * {
@@ -15,11 +16,9 @@
 
 body {
     line-height: 1.6;
-}
-
-html {
-    min-height: 100%;
-    position: relative;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 2fr 4fr 1fr;
 }
 
 .header {
@@ -57,7 +56,11 @@ html {
 }
 
 .cell:hover {
-    background-color: var(--cell-hover)
+    background-color: var(--cell-hover);
+}
+
+.restart-button:hover {
+    background-color: var(--button-hover);
 }
 
 .content {
@@ -69,6 +72,7 @@ html {
 }
 
 .restart-button {
+    cursor: pointer;
     color: var(--dark-blue);
     border: 2px solid var(--dark-blue);
     border-radius: 5px;
@@ -89,10 +93,6 @@ html {
     align-items: center;
     justify-content: center;
     padding: 20px 0 20px 0;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    left: 0;
 }
 
 .table {
@@ -101,13 +101,65 @@ html {
     width: 454px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    border: 2px solid var(--dark-blue)
+    border: 2px solid var(--dark-blue);
 }
 
 @media (max-width: 660px) {
 
+    body {
+        grid-template-rows: 1fr 5fr 1fr;
+    }
+
+    .title {
+        font-size: 4rem;
+    }
+
+    .info {
+        font-size: 2rem;
+    }
+
+    .table {
+        height: 394px;
+        width: 394px;
+        border: 2px solid var(--dark-blue);
+    }
+
+    .cell {
+        height: 130px;
+        width: 130px;
+        font-size: 4rem;
+    }
+
+    .restart-button {
+        height: 70px;
+        width: 160px;
+        font-size: 2rem;
+    }
+
 }
 
-@media (max-width: 420px) {
+@media (max-width: 525px) {
 
+    body {
+        grid-template-rows: 1fr 6fr 1fr;
+    }
+    
+    .title {
+        font-size: 3rem;
+    }
+
+    .table {
+        height: 304px;
+        width: 304px;
+    }
+    .cell {
+        height: 100px;
+        width: 100px;
+    }
+    
+    .restart-button {
+        height: 60px;
+        width: 140px;
+        font-size: 1.7rem;
+    }
 }
