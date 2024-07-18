@@ -1,7 +1,7 @@
 :root {
-    --dark-blue: #1A237E; /* header title, table info, X and 0 signs, restart button, restart button border, footer background */
-    --lavender: #EDE7F6; /* title background, table background, footer text */
-    --light-blue: #C5CAE9; /* header border, table cells border, restart button background */
+    --dark-blue: #1a237e; /* header title, table info, X and 0 signs, restart button, restart button border, footer background */
+    --lavender: #ede7f6; /* title background, table background, footer text */
+    --light-blue: #c5cae9; /* header border, table cells border, restart button background */
     --white: #fcf4fd; /* table cells background */
     --cell-hover: #b291ff;
     --button-hover: #a2a7ca;
@@ -11,7 +11,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Varela Round', sans-serif;
+    font-family: "Varela Round", sans-serif;
 }
 
 body {
@@ -39,7 +39,7 @@ body {
 .info {
     color: var(--dark-blue);
     font-size: 3rem;
-    padding: 15px 0 15px 0
+    padding: 15px 0 15px 0;
 }
 
 .cell {
@@ -105,7 +105,6 @@ body {
 }
 
 @media (max-width: 660px) {
-
     body {
         grid-template-rows: 1fr 5fr 1fr;
     }
@@ -135,15 +134,13 @@ body {
         width: 160px;
         font-size: 2rem;
     }
-
 }
 
 @media (max-width: 525px) {
-
     body {
         grid-template-rows: 1fr 6fr 1fr;
     }
-    
+
     .title {
         font-size: 3rem;
     }
@@ -156,7 +153,7 @@ body {
         height: 100px;
         width: 100px;
     }
-    
+
     .restart-button {
         height: 60px;
         width: 140px;
